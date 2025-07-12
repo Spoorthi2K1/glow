@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Glowthic - Personalized Skincare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #4a5568;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e0a3cc;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: linear-gradient(135deg, #e0a3cc, #c3a3e0);
+            color: white;
+        }
+        
+        main {
+            padding: 4rem 0;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: #e0a3cc;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .text-content {
+            padding: 2rem;
+        }
+        
+        .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #5a6c7d;
+            line-height: 1.8;
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lab-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .lab-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(224, 163, 204, 0.2), rgba(195, 163, 224, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card h3 {
+            color: #e0a3cc;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Glowthic</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>About Glowthic</h1>
+        </section>
+
+        <section class="content">
+            <div class="text-content">
+                <p>At Glowthic, we believe that every skin is unique and deserves a personalized approach to skincare. Our innovative technology analyzes your skin's specific needs, lifestyle factors, and environmental conditions to create custom formulations that work exclusively for you. No more guessing games or one-size-fits-all solutions – just scientifically-backed skincare that adapts to your individual beauty journey.</p>
+                
+                <p>Founded by a team of dermatologists, cosmetic chemists, and skincare enthusiasts, Glowthic combines cutting-edge laboratory research with the timeless wisdom of natural ingredients. Our state-of-the-art facility employs advanced AI algorithms and precision formulation techniques to craft products that not only address your current skin concerns but also evolve with your changing needs over time.</p>
+            </div>
+            
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Advanced skincare laboratory with modern equipment and scientists working on personalized formulations" 
+                     class="lab-image">
+                <div class="image-overlay"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Personalized Formulations</h3>
+                <p>Each product is uniquely crafted based on your skin analysis and personal preferences.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Scientific Excellence</h3>
+                <p>Our laboratory combines advanced technology with proven dermatological research.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Natural Ingredients</h3>
+                <p>We source the finest natural and organic ingredients from around the world.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Glowthic. All rights reserved. | Personalized skincare for your unique glow.</p>
+        </div>
+    </footer>
+</body>
+</html>

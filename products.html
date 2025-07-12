@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Glowthic Personalized Skincare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #4a5568;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e0a3cc;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: linear-gradient(135deg, #e0a3cc, #c3a3e0);
+            color: white;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: #e0a3cc;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0a3cc, #c3a3e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .product-content {
+            padding: 1.5rem;
+        }
+        
+        .product-content h3 {
+            color: #e0a3cc;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .product-content p {
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            color: #e0a3cc;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(224, 163, 204, 0.1), rgba(195, 163, 224, 0.1));
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0a3cc, #c3a3e0);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Glowthic</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Our Products</h1>
+            <p>Discover our range of personalized skincare solutions, each carefully crafted to address your unique skin needs and concerns.</p>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🧴</div>
+                <div class="product-content">
+                    <h3>Personalized Cleanser</h3>
+                    <p>A gentle yet effective cleanser formulated specifically for your skin type, removing impurities while maintaining your skin's natural balance.</p>
+                    <div class="product-price">From $28</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">✨</div>
+                <div class="product-content">
+                    <h3>Custom Serum</h3>
+                    <p>Target your specific skin concerns with our personalized serum blend, featuring active ingredients chosen just for you.</p>
+                    <div class="product-price">From $45</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🌙</div>
+                <div class="product-content">
+                    <h3>Night Treatment</h3>
+                    <p>Rejuvenate your skin overnight with our personalized night treatment that works while you sleep to restore and repair.</p>
+                    <div class="product-price">From $38</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">☀️</div>
+                <div class="product-content">
+                    <h3>Day Moisturizer</h3>
+                    <p>Keep your skin hydrated and protected throughout the day with our lightweight, personalized moisturizer with SPF.</p>
+                    <div class="product-price">From $32</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">👁️</div>
+                <div class="product-content">
+                    <h3>Eye Care</h3>
+                    <p>Specially formulated eye treatment to address concerns like dark circles, puffiness, and fine lines around the delicate eye area.</p>
+                    <div class="product-price">From $42</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🌸</div>
+                <div class="product-content">
+                    <h3>Weekly Mask</h3>
+                    <p>Give your skin an extra boost with our personalized weekly treatment mask designed to address your specific skincare goals.</p>
+                    <div class="product-price">From $35</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 style="color: #e0a3cc; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="margin-bottom: 2rem; color: #5a6c7d;">Take our skin analysis quiz to discover your personalized skincare routine.</p>
+            <a href="contact.html" class="cta-button">Get Your Personalized Routine</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Glowthic. All rights reserved. | Personalized skincare for your unique glow.</p>
+        </div>
+    </footer>
+</body>
+</html>
